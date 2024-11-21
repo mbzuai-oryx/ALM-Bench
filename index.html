@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<meta property='og:title' content='All Languages Matter: Evaluating LMMs on Culturally Diverse 100 Languages'/>
+<meta property='og:image' content=''/>
+<meta property='og:description' content=''/>
+<meta property='og:url' content='https://github.com/mbzuai-oryx/ALM-Bench'/>
+<meta property='og:image:width' content='1200' />
+<meta property='og:image:height' content='663' />
+<!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
+<meta property="og:type" content='website'/>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VZKE74FPW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9VZKE74FPW');
+</script>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="All Languages Matter: Evaluating LMMs on Culturally Diverse 100 Languages">
+  <meta name="keywords" content="Multilingual Multimodal Benchmark, 100 languages, Cultural Multilingual Benchmark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All Languages Matter: Evaluating LMMs on Culturally Diverse 100 Languages</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/tab_gallery.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="juxtapose/css/juxtapose.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/magnifier.js"></script>
+  <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/image_card_fader.css">
+  <link rel="stylesheet" href="./static/css/image_card_slider.css">
+
+</head>
+
+<style>
+  @import url('https://fonts.cdnfonts.com/css/menlo');
+</style>
+
+
+<body>
+  <section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">All Languages Matter: Evaluating LMMs on Culturally Diverse 100 Languages</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://ashmalvayani.github.io/">Ashmal Vayani</a><sup>1,2♠</sup>,</span>
+            <span class="author-block"><a href="https://dinuransika.github.io/">Dinura Dissanayake</a><sup>2♠</sup>,</span>
+            <span class="author-block"><a href="https://hasindri.github.io">Hasindri Watawana</a><sup>2♠</sup>,</span>
+            <span class="author-block"><a href="">Noor Ahsan</a><sup>2♠</sup>,</span>
+            <span class="author-block"><a href="">Nevasini Sasikumar</a><sup>2♠</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=flvl5YQAAAAJ&hl=en">Omkar Thawakar</a><sup>2♠</sup>,</span>
+
+
+            <span class="author-block"><a href="">Henok Biadglign Ademtew</a>,</span>
+            <span class="author-block"><a href="">Yahya Hmaiti</a>,</span>
+            <span class="author-block"><a href="">Amandeep Kumar</a>,</span>
+            <span class="author-block"><a href="">Kartik Kuckreja</a>,</span>
+            <span class="author-block"><a href="">Mykola Maslych</a>,</span>
+            <span class="author-block"><a href="">Wafa Al Ghallabi</a>,</span>
+            <span class="author-block"><a href="">Mihail Mihaylov</a>,</span>
+            <span class="author-block"><a href="">Chao Qin</a>,</span>
+            <span class="author-block"><a href="">Abdelrahman M Shaker</a>,</span>
+            <span class="author-block"><a href="">Mike Zhang</a>,</span>
+            <span class="author-block"><a href="">Mahardika Krisna Ihsani</a>,</span>
+            <span class="author-block"><a href="">Amiel Esplana</a>,</span>
+            <span class="author-block"><a href="">Monil Gokani</a>,</span>
+            <span class="author-block"><a href="">Shachar Mirkin</a>,</span>
+            <span class="author-block"><a href="">Harsh Singh</a>,</span>
+            <span class="author-block"><a href="">Ashay Srivastava</a>,</span>
+            <span class="author-block"><a href="">Endre Hamerlik</a>,</span>
+            <span class="author-block"><a href="">Fathinah Asma Izzati</a>,</span>
+            <span class="author-block"><a href="">Fadillah Adamsyah Maani</a>,</span>
+            <span class="author-block"><a href="">Sebastian Cavada</a>,</span>
+            <span class="author-block"><a href="">Jenny Chim</a>,</span>
+            <span class="author-block"><a href="">Rohit Gupta</a>,</span>
+            <span class="author-block"><a href="">Sanjay Manjunath</a>,</span>
+            <span class="author-block"><a href="">Kamila Zhumakhanova</a>,</span>
+            <span class="author-block"><a href="">Feno Heriniaina Rabevohitra</a>,</span>
+            <span class="author-block"><a href="">Azril Amirudin</a>,</span>
+            <span class="author-block"><a href="">Muhammad Ridzuan</a>,</span>
+            <span class="author-block"><a href="">Daniya Kareem</a>,</span>
+            <span class="author-block"><a href="">Ketan More</a>,</span>
+            <span class="author-block"><a href="">Kunyang Li</a>,</span>
+            <span class="author-block"><a href="">Pramesh Shakya</a>,</span>
+            <span class="author-block"><a href="">Muhammad Saad</a>,</span>
+            <span class="author-block"><a href="">Amirpouya Ghasemaghaei</a>,</span>
+            <span class="author-block"><a href="">Amirbek Djanibekov</a>,</span>
+            <span class="author-block"><a href="">Dilshod Azizov</a>,</span>
+            <span class="author-block"><a href="">Branislava Jankovic</a>,</span>
+            <span class="author-block"><a href="">Naman Bhatia</a>,</span>
+            <span class="author-block"><a href="">Alvaro Cabrera</a>,</span>
+            <span class="author-block"><a href="">Johan Obando-Ceron</a>,</span>
+            <span class="author-block"><a href="">Olympiah Otieno</a>,</span>
+            <span class="author-block"><a href="">Fabian Farestam</a>,</span>
+            <span class="author-block"><a href="">Muztoba Rabbani</a>,</span>
+            <span class="author-block"><a href="">Sanoojan Baliah</a>,</span>
+            <span class="author-block"><a href="">Santosh Sanjeev</a>,</span>
+            <span class="author-block"><a href="">Abduragim Shtanchaev</a>,</span>
+            <span class="author-block"><a href="">Maheen Fatima</a>,</span>
+            <span class="author-block"><a href="">Thao Nguyen</a>,</span>
+            <span class="author-block"><a href="">Amrin Kareem</a>,</span>
+            <span class="author-block"><a href="">Toluwani Aremu</a>,</span>
+            <span class="author-block"><a href="">Nathan Xavier</a>,</span>
+            <span class="author-block"><a href="">Amit Bhatkal</a>,</span>
+            <span class="author-block"><a href="">Hawau Toyin</a>,</span>
+                
+            <!-- <br> -->
+              
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=gPGQuBQAAAAJ&hl=en&oi=ao">Aman Chadha</a><sup>3♠</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&user=bZ3YBRcAAAAJ">Hisham Cholakkal</a><sup>2♠</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&authuser=1&user=_KlvMVoAAAAJ">Rao Muhammad Anwer</a><sup>2,4♠</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=lkWfR08AAAAJ&hl=en">Michael Felsberg</a><sup>6♠</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=qQP6WXIAAAAJ&hl=en&oi=ao">Jorma Laaksonen</a><sup>4♠</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=Gmjwy-IAAAAJ&hl=en&oi=ao">Thamar Solorio</a><sup>2♠</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=WR1ImCMAAAAJ&hl=en&oi=ao">Monojit Choudhury</a><sup>2♠</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=-9ifK0cAAAAJ&hl=en&oi=ao">Ivan Laptev</a><sup>2♠</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en&oi=ao">Mubarak Shah</a><sup>1,3♠</sup></span>
+            <span class="author-block"><a href="https://salman-h-khan.github.io/">Salman Khan</a><sup>2,5♠</sup>,</span>
+            <span class="author-block"><a href="https://sites.google.com/view/fahadkhans/home">Fahad Shahbaz Khan</a><sup>2,6♠</sup></span>
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Central Florida,</span>
+            <span class="author-block"><sup>2</sup>Mohamed bin Zayed University of AI,</span>
+            <span class="author-block"><sup>3</sup>Amazon,</span>
+            <span class="author-block"><sup>4</sup>Aalto University,</span>
+                <br>
+            <span class="author-block"><sup>6</sup>Australian National University,</span>
+            <span class="author-block"><sup>5</sup>Linkoping University,</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+                                </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/MBZUAI/ALM-Bench" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+              <span class="link-block">
+                <a href="https://github.com/mbzuai-oryx/ALM-Bench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#bibtex"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-obp"></i>
+                  </span>
+                  <span>BibTex</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <p align="justify"> 
+            Motivated by the significant progress in vision-language tasks by Large Multi-modal Models (LMMs), and recognizing their limitations in understanding cultural and linguistic diversity due to constrained datasets and limited question types, we present a new evaluation benchmark, <b>All Languages Matter Benchmark <i>(ALM-Bench)</i> </b> for LMMs. ALM-Bench aims to assess the next generation of massively multilingual multimodal models in a standardized way, pushing the boundaries of LMMs towards better cultural understanding and inclusivity. </p>
+        <!-- <br> -->
+
+    <div class="column">
+        <div style="text-align:center;" >
+            <!-- <h4 class="subtitle has-text-centered"> -->
+            <img src="./static/images/main_figure.jpg">
+            <!-- </h4> -->
+            
+            <div class="content has-text-justified">
+                <p align="justify"> <b> <span>Figure</span></b>: Benchmarking LMMs on diverse languages & cultures: <b> <span style="color: blue;">(a)</span></b>: Performance of various open versus closed-sourced LMMs on ALM-Bench. For each LMM, we also report performance on low versus high-resource languages. All these carefully selected models were released after 2023. <b> <span style="color: blue;">(b)</span></b>: Performance of high-performing LMMs on our culturally curated 13 categories available in our ALM-Bench.</p>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <img src="./static/images/ALMFigure.png" >
+        <div class="content has-text-justified">
+            <p align="justify"> <b> <span>Figure</span></b>: ALM-Bench comprises a diverse set of 100 languages with manually verified annotations by respective native language experts. Here, qualitative examples highlight the comprehensive set of 13 cultural aspects covered in the benchmark, such as heritage, customs, architecture, literature, music, and sports. It also evaluates visual understanding for six generic aspects. The ALM-Bench focuses on low- resource languages and different regions, spanning 73 countries across five continents and 24 distinct scripts. ALM-Bench covers diverse questions, such as multiple choice questions (MCQs), true/false (T/F), short and long visual question answers (VQAs). </p>
+        </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+                 <!-- Visual Effects. -->
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+            Existing Large Multimodal Models (LMMs) generally focus on only a few regions and languages. As LMMs continue to improve, it is increasingly important to ensure they understand cultural contexts, respect local sensitivities, and support low-resource languages, all while effectively integrating corresponding visual cues. In pursuit of culturally diverse global multimodal models, our proposed All Languages Matter Benchmark (<i>ALM-Bench</i>) represents the largest and most comprehensive effort to date for evaluating LMMs across 100 languages. <i>ALM-Bench</i> challenges existing models by testing their ability to understand and reason about culturally diverse images paired with text in various languages, including many low-resource languages traditionally underrepresented in LMM research. The benchmark offers a robust and nuanced evaluation framework featuring various question formats, including true/false, multiple choice, and open-ended questions, which are further divided into short and long-answer categories. <i>ALM-Bench</i> design ensures a comprehensive assessment of a model’s ability to handle varied levels of difficulty in visual and linguistic reasoning. To capture the rich tapestry of global cultures, <i>ALM-Bench</i> carefully curates content from 13 distinct cultural aspects, ranging from traditions and rituals to famous personalities and celebrations. Through this, <i>ALM-Bench</i> not only provides a rigorous testing ground for state-of-the-art open and closed-source LMMs but also highlights the importance of cultural and linguistic inclusivity, encouraging the development of models that can serve diverse global populations effectively. Our benchmark and codes are publicly available. <br>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">ALM-Bench assesses the multilingual multimodal models towards better cultural understanding and inclusivity.</h2>
+        <div class="content has-text-justified">
+          <p>
+          <h5> <b> Main contributions: </b></h5>
+           <ol>
+             <li> <b>All Languages Matter Benchmark (ALM-Bench): </b> We introduce ALM-Bench, a culturally diverse multilingual and multimodal VQA benchmark covering 100 languages with 22.7K question-answers. ALM-Bench encompasses 19 generic and culture-specific domains for each language, enriched with four diverse question types.</li>
+            <li><b>Extensive Human Annotation:  </b>ALM-Bench is meticulously curated and verified with native-language experts (over 800 hours of human annotators), ensuring cultural relevance and accuracy across low- and high-resource languages alike.</li>
+            <li><b>Comprehensive Evaluation:  </b>We benchmark existing LMMs on the ALM-Bench, identifying performance gaps and areas for improvement, especially in culturally complex multilingual scenarios.</li>
+
+           </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+<section class="section">
+  
+    <!--/ Matting. -->
+    <div class="container is-max-desktop">
+    
+    <!-- Latent space editing applications -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">ALM-Bench Dataset Overview</h2>
+        
+        <div class="content has-text-centered">
+            <img src="./static/images/Comparison_Table.jpg"  style="max-width:90%">
+                                  <p class="content has-text-justified">
+            <b>Table:</b> Comparison of various LMM benchmarks with a focus on multilingual and cultural understanding. The Domains indicate the range of aspects covered by the dataset for each language. Question Form is categorized as "Diverse" if the questions phrasing varies, and "Fixed" otherwise. Annotation Types are classified as "Manual" if questions were originally in the local language, "Manual+Auto" if questions were generated or translated using GPT-4/Google API and subsequently validated by human experts, and "Auto" if generated or translated automatically without human validation. Bias Correction reflects whether the dataset is balanced across cultures and countries, while Diversity indicates whether the dataset includes both Western and non-Western minority cultures. ‘-’ means information not available.
+          </p>
+        </div>
+        <div class="content has-text-justified">
+                      <p>
+            <b>Overview of ALM-Bench dataset.</b> 
+            ALM-Bench comprises of 22,763 diverse questions across 19 subsets in 100 languages. The dataset spans 73 countries across five continents, capturing the cultural nuances of both underrepresented and predominant languages from different regions. We include 24 language scripts and 15 language families. These 19 categories includes:
+
+         <style>
+            .two-column-list {
+                column-count: 2;
+                column-gap: 0px;
+                list-style: decimal;
+                padding: 0;
+                margin: 0;
+            }
+            .two-column-list li {
+                margin-bottom: -5px;
+            }
+            .two-column-list-container {
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        
+        <div class="two-column-list-container">
+            <ol class="two-column-list">
+                <li>Indoor</li>
+                <li>Outdoor</li>
+                <li>Food items</li>
+                <li>Memes</li>
+                <li>Painting</li>
+                <li>Sketch</li>
+                <li>Food</li>
+                <li>Lifestyle</li>
+                <li>Religion</li>
+                <li>Literature</li>
+                <li>Music</li>
+                <li>Customs</li>
+                <li>Festivals</li>
+                <li>Heritage</li>
+                <li>Economy</li>
+                <li>Media</li>
+                <li>Architecture</li>
+                <li>Sports</li>
+                <li>Notable Key Figures</li>
+            </ol>
+        </div>
+
+        </div>
+
+      </div>
+    </div>
+
+            <!--/ Matting. -->
+    <div class="container is-max-desktop">
+
+    <!-- Latent space editing applications -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Dataset Collection and Verification Pipeline</h2>
+
+        <div class="content has-text-centered">
+            <img src="./static/images/annotation_process.jpg"  style="max-width:100%">
+                                  <p class="content has-text-justified">
+
+            <div class="content has-text-justified">
+                <p align="justify"> <b> <span>Figure</span></b>:
+            Data collection and verification pipeline. Our benchmark features both cultural specific content sourced from the web  <b> <span style="color: blue;">(left)</span></b> and generic image understanding collection sourced from existing LMM benchmark <b> <span style="color: blue;">(right)</span></b>. The cultural part is carefully filtered to remove noisy samples and private information. We use GPT4o for translations which are manually verified and corrected with over 800 hours of human annotators (native speakers). Our ALM-Bench has diverse question types and features approximately 23K QA pairs in total in 100 languages.</p>
+            </div>
+
+
+        <div class="content has-text-justified">
+            <h3 class="title is-4 has-text-justified">Data Statistics</h3>
+    
+            <p align="justify"> Data statistics of our ALM-Bench showing the diversity of the scripts, global coverage, comprehensive categories, and various question types. Our dataset contains 22.7K high-quality question-answers in total, covering 100 languages and 24 scripts. All the samples are manually verified by native speakers. </p>
+            <div class="content has-text-centered">
+            <img src="./static/images/ALM_stats.jpg" style="max-width:40%"> </div>
+            <p align="center"> <b> <span>Figure</span></b>: We present the data statistics of our ALM-Bench in the figure above.</p>
+        </div>
+
+
+        <div class="content has-text-justified">
+            <div class="content has-text-centered">
+            <img src="./static/images/word_cloud.png" style="max-width:100%"> </div>
+            <p align="center"> <b> <span>Figure</span></b>: Illustration of the most frequent keywords in some categories from ALM-Bench dataset.</p>
+        </div>
+        </div>
+          
+      </div>
+    </div>
+
+    <br><br>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3">Experimental results on ALM-Bench</h2>
+
+        <div class="content has-text-justified">
+        <p> We present our evaluations with 16 recent state-of-the-art LMMs is described in the below sections. We also highlight several key-observations and analysis and show how simple prompting techniques can help improve LMM performance. </p>
+        </div>
+
+                <h3 class="title is-4 has-text-justified">Performance of Open- and Closed-Source LMMs on ALM-Bench</h3>
+
+        <div class="content has-text-centered">
+                      <p style="text-align: justify;">
+
+In the below heatmap figure, we present results for both open-source and closed-source models, on the ALM-Bench. </p>
+<img src="./static/images/results_heatmap.jpg"  style="max-width:100%">
+
+<p style="text-align: justify;"> ALM-Bench Performance comparison of different open and closed-sourced models (y-axis) on the 100 languages (x-axis) of our ALM-Bench. The performance is represented as an average accuracy across all questions in a language. The actual performance of a model on a language is shown in each respective box, where the higher accuracy is highlighted with a high color intensity. The closed-source propriety models generally perform better across languages compared to their open-sourced counterparts. The performance on several high resource languages (e.g., English, French, Chinese and Spanish) is generally higher throughout different models, whereas all open-source models struggle on low resource languages (e.g., Amharic, Kinyarwanda, Burmese) Overall, GPT-4o and GLM-4V-9B performs better in terms of closed-source and open-source models, respectively. Best viewed zoomed in. </p>
+
+    </div>
+    <br/>
+    </div>
+ </div>
+</div>
+
+            <h3 class="title is-4 has-text-justified">Main findings and Qualitative Results </h3>
+                <div class="content has-text-justified">
+            <p>
+            Based on the results of several LMMs on ALM-Bench, we draw key findings and show qualitative results. These insights can serve as valuable guidance for assessing the next generation of massively multilingual multimodal models in a standardized way, pushing the boundaries of LMMs towards better cultural understanding and inclusivity.
+            </p>
+            
+            <p>
+                1) <b> Overall Results. </b> The overall results illustrates the performance of 16 LMMs on ALM-Bench, showing that closed-source models (e.g., GPT-4o and Gemini-1.5-Pro) outperform open-source ones, with GPT-4o achieving 78.8% accuracy compared to 51.9% for GLM-4V-9B. Both categories struggle with low-resource languages, with accuracy drops from 88.4% to 50.8% (GPT-4o) and from 80.3% to 15.6% (GLM-4V-9B) for Amharic. The benchmark also reveals a consistent performance gap between high- and low-resource languages across models, though Gemini-1.5-Pro stands out with minimal deterioration for low-resource languages.
+            </p>
+            <p>
+                2) <b> The importance of visual contexts. </b> Another important observation on experiment using only the base LLMs of various LMMs reveals the critical role of visual input in the ALM-Bench. GPT-4o's performance drops by 27.3% without images, highlighting significant gains with visual context in languages like Sinhala (38.7%), Sanskrit (50%), and Dutch (40%). Similarly, Qwen2-7B shows a 13% absolute and 24.8% relative drop in performance without visual input. These results emphasize the robustness of the benchmark and the reliance of LLMs on image inputs for accurate responses.
+            </p>
+            <p>
+                3) <b> Comparison across language scripts. </b> The comparison of 100 languages grouped by 24 distinct scripts in ALM-Bench reveals that both GPT-4o and Qwen2-VL struggle significantly with low-resource scripts like Ge’ez (Amharic), Sinhalese (Sinhala), Oriya (Odia), and Myanmar (Myanmar-Burmese). This highlights the predominant training focus on high-resource languages. An error analysis on cultural examples with native speakers identified six error types for GPT-4o: knowledge gaps, reasoning errors, perceptual issues, language errors, translation mistakes, and cultural misunderstandings, with knowledge gaps and cultural misunderstandings being the most common. 
+            </p>
+            <div class="content has-text-centered">
+                <img src="./static/images/Language_Scripts.jpg" style="max-width:55%">
+            </div>
+            <br>
+
+            <p>
+                4) <b> Comparison across language families. </b> The analysis of LMM performance across 15 language families reveals that models perform significantly worse on African languages from the Atlantic-Congo family, such as Igbo, Kinyarwanda, Shona, Swahili, and Yoruba. In contrast, better performance is observed for Asian languages like Chinese, Korean, and Vietnamese, as well as Western languages such as English, French, and German.
+            </p>
+            <div class="content has-text-centered">
+                <img src="./static/images/Language_Families.jpg" style="max-width:55%" align="center">
+            </div>
+
+            <p>
+                5) <b> Effect of question types. </b> The analysis of question types shows that all models perform better on decision-making questions like MCQs and T/F questions. Closed-source models, such as GPT-4o and Gemini-1.5-Pro, handle long VQAs (LVQAs) better than short ones (SVQAs). In contrast, open-source models, including GLM-4V-9B and Qwen2-VL, perform better on SVQAs, struggling with long, accurate, and fluent responses across 100 multilingual settings.
+            </p>
+            <div class="content has-text-centered">
+                <img src="./static/images/Different_Question_Types.jpg" style="max-width:55%">
+            </div>
+            <br>
+            
+            <p>
+                6) <b> Cultural awarness of LMMs. </b> The study on the cultural awareness of LMMs shows that while GPT-4o achieves the highest overall score of 80.3%, there is significant variation in its performance across different cultural domains. For example, it scores 83.7% in Education and Heritage but drops to 72.7% in the Notable Key Figures category. This variation likely stems from the fact that categories like Education and Heritage are better represented in LMM training datasets, while culturally specific domains like Notable Key Figures and Customs vary more across languages and regions.
+            </p>
+
+            <p>
+                7) <b> Impact of location-aware information in prompts. </b> When evaluated with country-specific information, closed-source models like GPT-4o and Gemini-1.5-Pro show better performance, utilizing the added geographic context to enhance cultural specificity across languages. Open-source models do not benefit as much from the additional location-aware prompts.
+            </p>
+
+                <div class="content has-text-centered">
+                        <table border="1" cellspacing="0" style="width: 400px; border-collapse: collapse; text-align: left; margin:  auto;">
+
+                <thead>
+                    <tr>
+                        <th colspan="1" align="center" style="font-size: 13px;">Models</th>
+                        <th colspan="1" align="center" style="font-size: 13px;">With Country Info.</th>
+                        <th colspan="1" align="center" style="font-size: 13px;">Without Country Info.</th>
+                    </tr>
+                    <tr style="background-color: #e6e6ff;">
+                        <td colspan="1" style="font-size: 12px;">GPT-4o</td>
+                        <td colspan="1" align="center" style="color: green; font-size: 13px;">83.57%</td>
+                        <td colspan="1" align="center" style="font-size: 13px;">80.96%</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #e6e6ff;">
+                        <td colspan="1" style="font-size: 13px;">Gemini-1.5-Pro</td>
+                        <td colspan="1" align="center" style="color: green; font-size: 13px;">81.52%</td>
+                        <td colspan="1" align="center" style="font-size: 13px;">76.19%</td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="font-size: 13px;">GLM-4V-9B</td>
+                        <td colspan="1" align="center" style="color: green; font-size: 13px;">56.78%</td>
+                        <td colspan="1" align="center" style="font-size: 13px;">56.41%</td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="font-size: 13px;">Qwen2-VL</td>
+                        <td colspan="1" align="center" style="color: green; font-size: 13px;">53.97%</td>
+                        <td colspan="1" align="center" style="font-size: 13px;">52.57%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <div class="content has-text-justified">
+                <p align="justify"> <b> <span>Table</span></b>: We study the performance of various LMMs with and without additional country location information. Proprietary models show a notable performance boost of 2.6% to 5% when location-aware prompts are used, while open-source models exhibit a marginal improvement. </p>
+            </div>
+
+            <br>
+        </div>
+
+
+        <h3 class="title is-4 has-text-justified">Qualitative exampels from GPT-4o on our ALM-Bench dataset</h3> 
+        
+        <p>
+            
+
+            <p align="justify"> 1) <b> Success cases prediction: </b>  We present some qualitative examples for success cases by GPT-4o on various language scripts.</p>
+            <div class="item item-sunflowers">
+                <img src="./static/images/success_cases.jpg" style="max-width:100%" align="center">
+            </div>
+            <br>
+
+            <p align="justify"> 2) <b> Failure Cases: </b> We present some qualitative examples for failure cases by GPT-4o on various language scripts and domains. For the failure cases, we specify them in various error types including lack of knowledge, perceptual error, lack of cultural understanding, language error, and translation error.</p>
+            <div class="item item-sunflowers">
+                <img src="./static/images/qual_error_mistakes.jpg" style="max-width:100%" align="center">
+            </div>
+            <br>
+
+            <p align="justify"> 3) <b> Error types analysis: </b> We show error analysis across 4 diverse language scripts, including Bengali, Sinhalese, Latin and Cyrillic on GPT-4o results, demonstrates significant challenges for even the top-performing closed-source models, particularly in cultural and reasoning comprehension. The ALM-Bench highlights these gaps, especially in languages with complex dialectal variations. </p>
+            <div class="item item-sunflowers">
+                <img src="./static/images/Error_Analysis.jpg" style="max-width:100%" align="center">
+            </div>
+            <br>
+
+            <p align="justify"> 4) <b> GPT-4o translation mistakes: </b> To analyze these issues, mistakes from the GPT-4o model in translations are categorized into four
+                types: semantic error, cultural error, language error, and grammatical error. We sample 57 question-answer pairs from 51 randomly selected languages and plotted error distribution below. Notably, GPT-4o encounters more issues with semantic and grammatical accuracy when translating into different languages. </p>
+            <div class="content has-text-centered">
+                <img src="./static/images/Mistake_Types.jpg" style="max-width:55%" align="center">
+            </div>
+
+            <p align="justify"> 5) <b> GPT-4o translation correction: </b> We present qualitative examples of various mistakes in GPT-4o translation including translation, semantic, cultural and grammatical errors. We employ expert human-feedback to rewrite the correct translations for all samples in our ALM-Bench dataset. </p>
+            <div class="content has-text-centered">
+                <img src="./static/images/translation_correction.png" style="max-width:55%" align="center">
+            </div>
+
+
+
+        <h3 class="title is-4 has-text-justified">Conclusion</h3>
+        <div class="content has-text-justified">
+          <p>
+            In this paper, we introduce ALM-Bench, a novel multilingual multimodal cultural benchmark for evaluation with over 22.7k humanly verified samples across 19 domains. Our benchmark encompasses cultural nuances from 73 countries in 24 language scripts and 15 language families. We conduct empirical analysis on 16 vision-language models with
+            various question types (MCQs, T/F, SVQA, and LVQAs) and highlight notable disparities in their performance. The performance difference between the best-performing open-source model and the proprietary model, GPT-4o, is 27%. Our results also highlight that the models perform superior on predominant language scripts such as Latin, Cyrillic, and Devanagari and under-performs on underrepresented scripts such as Ge’ez, Lao, Sinhalese, and Oriya. Moreover, cultural understanding of prominent language families such as Indo-European, Austronesian and Afro-Asiatic are well represented by GPT-4o as compared to Atlantic-Congo and Turkic families. Our work highlights the limitations of state-of-the-art LMMs in multilingual and multicultural settings, showing key areas for improvement. </p>
+
+            <br>
+            <p>For additional details about ALM-Bench evaluation and experimental results, please refer to our main paper. Thank you! </p>
+        </div>
+
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title"><a id="bibtex">BibTeX</a></h2>
+    <pre><code>@article{
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website adapted from the following <a href="https://mingukkang.github.io/GigaGAN/">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="juxtapose/js/juxtapose.js"></script>
+
+<script>
+var slider;
+let origOptions = {
+    "makeResponsive": true,
+    "showLabels": true,
+    "mode": "horizontal",
+    "showCredits": true,
+    "animate": true,
+    "startingPosition": "50"
+};
+
+const juxtaposeSelector = "#juxtapose-embed";
+const transientSelector = "#juxtapose-hidden";
+
+  inputImage.src = "./static/images/".concat(name, "_input.jpg")
+  outputImage.src = "./static/images/".concat(name, "_output.jpg")
+
+  let images = [inputImage, outputImage];
+  let options = slider.options;
+  options.callback = function(obj) {
+      var newNode = document.getElementById(obj.selector.substring(1));
+      var oldNode = document.getElementById(juxtaposeSelector.substring(1));
+      console.log(obj.selector.substring(1));
+      console.log(newNode.children[0]);
+      oldNode.replaceChild(newNode.children[0], oldNode.children[0]);
+      //newNode.removeChild(newNode.children[0]);
+      
+  };
+  
+  slider = new juxtapose.JXSlider(transientSelector, images, options);
+};
+
+
+
+(function() {
+    slider = new juxtapose.JXSlider(
+        juxtaposeSelector, origImages, origOptions);
+    //document.getElementById("left-button").onclick = replaceLeft;
+    //document.getElementById("right-button").onclick = replaceRight;
+})();
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  // expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = name;
+  // Show the container element (hidden with CSS)
+  // expandImg.parentElement.style.display = "block";
+
+$(".flip-card").click(function() {
+            console.log("fading in")
+            div_back = $(this).children().children()[1]
+            div_front = $(this).children().children()[0]
+            // console.log($(this).children("div.flip-card-back"))
+            console.log(div_back)
+            $(div_front).addClass("out");
+            $(div_front).removeClass("in");
+
+            $(div_back).addClass("in");
+            $(div_back).removeClass("out");
+
+});
+
+$(".flip-card").mouseleave(function() {
+            console.log("fading in")
+            div_back = $(this).children().children()[1]
+            div_front = $(this).children().children()[0]
+            // console.log($(this).children("div.flip-card-back"))
+            console.log(div_back)
+            $(div_front).addClass("in");
+            $(div_front).removeClass("out");
+
+            $(div_back).addClass("out");
+            $(div_back).removeClass("in");
+
+});
+
+</script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>    
+
+</body>
+</html>
