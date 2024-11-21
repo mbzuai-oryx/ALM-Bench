@@ -14,7 +14,7 @@
 
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)]()
 [![Dataset](https://img.shields.io/badge/Dataset-Access-<COLOR>)](https://huggingface.co/datasets/MBZUAI/ALM-Bench)
-[![Website](https://img.shields.io/badge/Project-Website-87CEEB)]()
+[![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://mbzuai-oryx.github.io/ALM-Bench/)
 
 Official GitHub repository for  `All Languages Matter: Evaluating LMMs on Culturally Diverse 100 Languages`.
 
