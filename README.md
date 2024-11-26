@@ -143,7 +143,7 @@ Follow the instructions in [EVALUATION](https://github.com/mbzuai-oryx/ALM-Bench
 #### 1) Comparing the Predicted Answers with Ground-Truth Answers using LLM-Assisted evaluation:
 Once the answer predictions are generated from step 1, we utilize LLM as a Judge to measure/quantify the correctness of LMM prediction for each question in the ALM-Bench. Please follow the instructions in LLM-Scoring in [EVALUATION.md](https://github.com/mbzuai-oryx/ALM-Bench/blob/main/Evaluation/EVALUATION.md) for using LMM-Assisted evaluation.
 
-## 🧩 Additional Assets for LLM-based QA generation process:
+## 🧩 Additional Assets for LLM-based QA generation process and Image Scrapping:
 
 #### Scrapping Images from the internet for our cultural examples:
 
@@ -154,7 +154,7 @@ We scrap the images from web-sources to gather cultural images using the script,
 
 The first version of the ALM-Bench dataset is already finalized. However, for additional reference, we are providing code snippets alongside LLM prompts that we used to generate the initial set of QA pairs.
 
-Please refer to [QA_GENERATION.md]() for instructions and sample code on generating question-answer pairs for CVRR-ES videos using LLM.
+Please refer to [QA_Pairs_Generation](https://github.com/mbzuai-oryx/ALM-Bench/blob/main/Evaluation/QA_Pairs_Generation.py) for instructions and sample code on generating question-answer pairs for ALM-Bench dataset using LMM.
 
 <hr />
 
