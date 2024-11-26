@@ -68,14 +68,8 @@ def read_files_from_subfolder(subfolder_path, language, save_path):
                             },
                             {
                                 "role": "system",
-                                "content": f"""Here is an image, caption and  I have on hand. 
-                                I'd like you to generate two short questions and answers,
-                                two multiple choice questions and answers,
-                                one true/false question,
-                                and one long question and answer, 
-                                refer to the caption for the context/hint. 
-                                Take into account the cultural diversity of {sub_landesc}
-                                """ + """
+                                "content": f"""Given an image and its caption, generate two short questions and answers, two multiple-choice questions and answers, one true/false question, and one long question and answer. Refer to the caption for the context/hint. Take into account the cultural diversity of {sub_landesc}"""
+                                + """
                                 Follow the following rules while designing questions and answers:
                                 1. The question must be answerable only by looking at the image.
                                 2. Ensure that the questions are culturally relevant and specific to the image.
