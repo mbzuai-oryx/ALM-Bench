@@ -138,7 +138,10 @@ Data Fields
 To evaluate Video-LMMs on the ALM-Bench, please follow the following steps:
 
 #### 0) Installation
-Follow the instructions in [INSTALL.md](assets/INSTALL.md) to install packages and model weights required to run the sample Video-LMM codes for evaluation. 
+Follow the instructions in [INSTALL.md](https://github.com/mbzuai-oryx/ALM-Bench/blob/main/Assets/INSTALL.md) to install packages and model weights required to run the sample Video-LMM codes for evaluation. 
+
+#### 1) Comparing the Predicted Answers with Ground-Truth Answers using LLM-Assisted evaluation:
+Once the answer predictions are generated from step 1, we utilize LLM as a Judge to measure/quantify the correctness of LMM prediction for each question in the ALM-Bench. Please follow the instructions in LLM_SCORING.md for using LMM-Assisted evaluation.
 
 ## 🧩 Additional Assets for LLM-based QA generation process:
 
