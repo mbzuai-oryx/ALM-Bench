@@ -108,7 +108,37 @@ We show the performance comparison of GPT-4o and Qwen2-VL on 15 language familie
 ## 🚀 Getting started with ALM-Bench
 
 ### Downloading and Setting Up ALM-Bench Dataset
+ALM-Bench dataset can be downloaded from our [huggingface](https://huggingface.co/datasets/MBZUAI/ALM-Bench). ALM-Bench consists of 22,763 question-answer (QA) pairs spanning over 100 languages and 19 categories. The general structure of our dataset looks like the following:
 
+```
+ALM-Bench/
+|–– Swedish/
+|   |–– Religion
+|   |–– Culture
+|   |–– Heritage
+|   |–– ... # remaining categories
+... # remaining languages
+```
+
+Data Fields
+```
+- 'file_name': , 
+- 'ID': A unique ID in the language#_cat#_img# format. 
+- 'Language': A language from the 100 languages.
+- 'Category': A category from our total 19 categories.
+- 'Question_Type': One of four question types, MCQs, T/F, SVQAs, and LVQAs.
+- 'English_Question': The original question in the English Language.
+- 'English_Answer': The original answer in the English Language.
+- 'Translated_Question': The translated and annotated question in the Native language. 
+- 'Translated_Answer': The translated and annotated answer in the Native language. 
+- 'Image_Url': The image URL that we have retrieved from the internet.
+```
+
+### Evaluating LMMs on ALM-Bench Dataset
+To evaluate Video-LMMs on the ALM-Bench, please follow the following steps:
+
+#### 0) Installation
+Follow the instructions in [INSTALL.md](assets/INSTALL.md) to install packages and model weights required to run the sample Video-LMM codes for evaluation. 
 
 ## 🧩 Additional Assets for LLM-based QA generation process:
 
