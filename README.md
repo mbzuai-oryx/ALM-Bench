@@ -12,7 +12,7 @@
 #### <sup>♠</sup> Core Authors
 #### University of Central Florida, Mohamed bin Zayed University of AI, Amazon, Aalto University, Australian National University, Linköping University
 
-[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)]()
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2411.16508)
 [![Dataset](https://img.shields.io/badge/Dataset-Access-<COLOR>)](https://huggingface.co/datasets/MBZUAI/ALM-Bench)
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://mbzuai-oryx.github.io/ALM-Bench/)
 
