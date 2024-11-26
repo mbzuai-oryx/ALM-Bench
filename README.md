@@ -138,12 +138,17 @@ Data Fields
 To evaluate Video-LMMs on the ALM-Bench, please follow the following steps:
 
 #### 0) Installation
-Follow the instructions in [INSTALL.md](https://github.com/mbzuai-oryx/ALM-Bench/blob/main/Assets/INSTALL.md) to install packages and model weights required to run the sample Video-LMM codes for evaluation. 
+Follow the instructions in [EVALUATION.md](https://github.com/mbzuai-oryx/ALM-Bench/blob/main/Evaluation/EVALUATION.md) to install packages and model weights required to run the sample Video-LMM codes for evaluation. 
 
 #### 1) Comparing the Predicted Answers with Ground-Truth Answers using LLM-Assisted evaluation:
-Once the answer predictions are generated from step 1, we utilize LLM as a Judge to measure/quantify the correctness of LMM prediction for each question in the ALM-Bench. Please follow the instructions in LLM_SCORING.md for using LMM-Assisted evaluation.
+Once the answer predictions are generated from step 1, we utilize LLM as a Judge to measure/quantify the correctness of LMM prediction for each question in the ALM-Bench. Please follow the instructions in LLM-Scoring in [EVALUATION.md](https://github.com/mbzuai-oryx/ALM-Bench/blob/main/Evaluation/EVALUATION.md) for using LMM-Assisted evaluation.
 
 ## 🧩 Additional Assets for LLM-based QA generation process:
+
+#### Scrapping Images from the internet for our cultural examples:
+
+We scrap the images from web-sources to gather cultural images using the script, [ImageScraping.py](https://github.com/mbzuai-oryx/ALM-Bench/blob/main/Evaluation/ImageScraping.py). We are providing code snippets to fetch open-license images.
+
 
 #### Generating LLM-based question-answer pairs from images from our cultural categories:
 
@@ -154,7 +159,7 @@ Please refer to [QA_GENERATION.md]() for instructions and sample code on generat
 <hr />
 
 ## 📂 License
-This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. The images in ALM-Bench dataset are collected from public domains and sources (refer to [main paper](https://arxiv.org/) for more details) and are for academic research use only. 
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. The images in ALM-Bench dataset are collected from public domains and sources (refer to [main paper](https://arxiv.org/abs/2411.16508) for more details) and are for academic research use only. 
 By using ALM-Bench, you agree not to use the dataset for any harm or unfair discrimination. Please note that the data in this dataset may be subject to other agreements. Video copyrights belong to the original dataset providers, video creators, or platforms.
 
 ## 📜 Citation
