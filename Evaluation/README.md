@@ -1,8 +1,6 @@
 ## Installation 
 We provide installation instructions for:
-- Setting up environments for evaluating LMMs on ALM-Bench
-- GPT-Scoring evaluation for LLM as a judge
-- Image Scrapping code.
+- Setting up environments for evaluating LMMs on ALM-Bench.
 
 ## Installing the requirements 
 Note: Ensure that the following packages are installed. Each LMM might have a slightly different requirement for torch and transformer versions; refer to their repositories for the exact versions. 
