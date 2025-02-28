@@ -1,4 +1,4 @@
-# All Languages Matter: Evaluating LMMs on Culturally Diverse 100 Languages
+# All Languages Matter: Evaluating LMMs on Culturally Diverse 100 Languages [CVPR 2025 🔥]
 
 <p align="center">
     <img src="https://i.imgur.com/waxVImv.png" alt="Oryx MobiLLama">
@@ -21,6 +21,7 @@ Official GitHub repository for  `All Languages Matter: Evaluating LMMs on Cultur
 ---
 
 ## 📢 Latest Updates
+- **Feb-26-25**- ALM-Bench is accepted at *CVPR 2025 🔥*
 - **Nov-25-24**- *Arxiv* Preprint is released! 🔥🔥
 - **Nov-20-24**- *ALM-Bench Dataset* and codes are released. It provides 22,763 human-annotated multimodal QA pairs across 19 categories to extensively evaluate the performance of LMMs. 🔥🔥
 
