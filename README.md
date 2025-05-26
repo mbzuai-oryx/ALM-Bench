@@ -1,4 +1,4 @@
-# All Languages Matter: Evaluating LMMs on Culturally Diverse 100 Languages [CVPR 2025 🔥]
+# All Languages Matter: Evaluating LMMs on Culturally Diverse 100 Languages [CVPR 2025 (Highlight) 🔥]
 
 <p align="center">
     <img src="https://i.imgur.com/waxVImv.png" alt="Oryx MobiLLama">
