@@ -21,6 +21,7 @@ Official GitHub repository for  `All Languages Matter: Evaluating LMMs on Cultur
 ---
 
 ## 📢 Latest Updates
+- ALM-Bench is accepted as *Highlight 🔥*
 - **Feb-26-25**- ALM-Bench is accepted at *CVPR 2025 🔥*
 - **Nov-25-24**- *Arxiv* Preprint is released! 🔥🔥
 - **Nov-20-24**- *ALM-Bench Dataset* and codes are released. It provides 22,763 human-annotated multimodal QA pairs across 19 categories to extensively evaluate the performance of LMMs. 🔥🔥
