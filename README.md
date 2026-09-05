@@ -185,6 +185,6 @@ This repository has borrowed Video-LMM evaluation code from [TimeChat](https://g
 
 ---
 [<img src="Assets/crcv_ucf.jpg" width="270" height="90">](https://www.crcv.ucf.edu/)
-[<img src="Assets/IVAL_logo.png" width="160" height="100">](https://www.ival-mbzuai.com)
+[<img src="Assets/IVAL_logo.png" width="160" height="100">](https://www.ival-mbzuai.net)
 [<img src="Assets/Oryx_logo.png" width="90" height="90">](https://github.com/mbzuai-oryx)
 [<img src="Assets/MBZUAI_logo.png" width="290" height="85">](https://mbzuai.ac.ae)
